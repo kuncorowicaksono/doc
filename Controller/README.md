@@ -26,7 +26,7 @@ GET/POST: {controller}/{method}/{value:optional}
 | `controller` | Class / filename as a blueprint or a set of instruction / method |
 | `method` | Method name |
 | `value` | Optional; One of the following method use this value: [`getsingle`](#getsingle) |
-| `primarykey`| String of id/primary key; for open the data detail, please get all data first using [`getsingle`](#getsingle) method |
+| `primarykey`| String of id/primary key; for open the detail record, please get all data first using [`getsingle`](#getsingle) method |
 | `pk_value`| String or integer as value of those primary key |
 | `user_id`| To capture user who doing update and store it to database |
 | `body format`| Only `json` is supported at the moment. This parameter is mandatory for all POST method |
