@@ -17,7 +17,7 @@ BasicModel helps you (developer) to create a code more fast and efficient. By us
 
 ## Features
 
-- [x] **getRecordCount**: Return number of rows;
+- [x] **[`getRecordCount`](#getRecordCount)**: Return number of rows;
 - [x] **getRecords**: Return array of records from table; *without softDelete;
 - [x] **insertRecord**: Insert record, on successful updates return success: true;
 - [x] **updateRecord**: Updates record, on successful updates return success: true;
