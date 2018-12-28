@@ -96,7 +96,7 @@ or in table view looks like this:
 
 ## How to Call
 
-## `getsingle`
+## `GetSingle`
 
 ***Goal :***
   * return array of one records from table; *without softDelete;
@@ -112,7 +112,7 @@ or in table view looks like this:
 
 <br/>
 
-## `get`
+## `Get`
 
 ***Goal :***
   * return array of records from table (without softDelete)
@@ -130,7 +130,7 @@ or in table view looks like this:
 
 <br/>
 
-## `readsoftdeleted`
+## `ReadSoftDeleted`
 
 ***Goal :***
   * return array of softDelete records from table
@@ -148,7 +148,7 @@ or in table view looks like this:
 
 <br/>
 
-## `insert`
+## `Insert`
 
 ***Goal :***
   * insert record, on successful updates return success: true.
@@ -200,7 +200,7 @@ or in table view looks like this:
 
 <br/>
 
-## `DeleteRecord`
+## `Delete`
 
 ***Goal :***
   * instead delete record from table, we use softdelete. For use harddelete / remove record from database, please ask backend developer.
@@ -224,7 +224,7 @@ or in table view looks like this:
 
 <br/>
 
-## `restoreSoftDeletedRecord`
+## `RestoreSoftDeletedRecord`
 
 ***Goal :***
   * restore data which already in softDeletedRecord.
