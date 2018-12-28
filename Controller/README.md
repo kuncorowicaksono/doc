@@ -34,18 +34,18 @@ GET/POST: {controller}/{method}/{value:optional}
 ## Available Method
 
 GET Method:
-- [x] **getsingle**: Return array of one records from table; *without softDelete;
-- [x] **get**: Return array of records from table; *without softDelete;
-- [x] **readsoftdeleted**: Return array of softDelete records from table;
+- [x] **[`getsingle`](#getsingle)**: Return array of one records from table; *without softDelete;
+- [x] **[`get`](#get)**: Return array of records from table; *without softDelete;
+- [x] **[`readsoftdeleted`](#readsoftdeleted)**: Return array of softDelete records from table;
 
 POST Method:
-- [x] **insert**: Insert record, on successful updates return success: true;
-- [x] **update**: Updates record, on successful updates return success: true;
-- [x] **Delete**: Instead delete record from table, we add deletedAt in database; (soft deleted)
-- [x] **updatesoftdeleted**: Restore data which already in softDeletedRecord;
+- [x] **[`insert`](#insert)**: Insert record, on successful updates return success: true;
+- [x] **[`update`](#update)**: Updates record, on successful updates return success: true;
+- [x] **[`Delete`](#Delete)**: Instead delete record from table, we add deletedAt in database; (soft deleted)
+- [x] **[`updatesoftdeleted`](#updatesoftdeleted)**: Restore data which already in softDeletedRecord;
 
 Another / Additional:
-- [x] **hardDeleteRecord**: Delete record from table, and store it to log; (by request)
+- [x] **[`hardDeleteRecord`](#hardDeleteRecord)**: Delete record from table, and store it to log; (by request)
 
 ## Running it locally
 
