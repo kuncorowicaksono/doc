@@ -41,11 +41,11 @@ GET Method:
 POST Method:
 - [x] **[`insert`](#insert)**: Insert record, on successful updates return success: true;
 - [x] **[`update`](#update)**: Updates record, on successful updates return success: true;
-- [x] **[`delete`](#deleterecord)**: Instead delete record from table, we add deletedAt in database; (soft deleted)
+- [x] **[`delete`](#delete)**: Instead delete record from table, we add deletedAt in database; (soft deleted)
 - [x] **[`updatesoftdeleted`](#updatesoftdeleted)**: Restore data which already in softDeletedRecord;
 
 Another / Additional:
-- [x] **[`hardDeleteRecord`](#hardDeleteRecord)**: Delete record from table, and store it to log; (by request)
+- [x] **[`hardDeleteRecord`](#delete)**: Delete record from table, and store it to log; (by request)
 
 ## Running it locally
 
@@ -224,7 +224,7 @@ or in table view looks like this:
 
 <br/>
 
-## `RestoreSoftDeletedRecord`
+## `UpdateSoftDeleted`
 
 ***Goal :***
   * restore data which already in softDeletedRecord.
