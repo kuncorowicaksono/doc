@@ -200,7 +200,7 @@ or in table view looks like this:
 
 <br/>
 
-## `Delete Record`
+## `DeleteRecord`
 
 ***Goal :***
   * instead delete record from table, we use softdelete. For use harddelete / remove record from database, please ask backend developer.
