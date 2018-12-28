@@ -130,7 +130,7 @@ or in table view looks like this:
 
 <br/>
 
-## `getSoftDeleteRecords`
+## `readsoftdeleted`
 
 ***Goal :***
   * return array of softDelete records from table
@@ -148,7 +148,7 @@ or in table view looks like this:
 
 <br/>
 
-## `insertRecord`
+## `insert`
 
 ***Goal :***
   * insert record, on successful updates return success: true.
@@ -174,7 +174,7 @@ or in table view looks like this:
 
 <br/>
 
-## `updateRecord`
+## `Update`
 
 ***Goal :***
   * updates record, on successful updates return success: true.
@@ -200,7 +200,7 @@ or in table view looks like this:
 
 <br/>
 
-## `DeleteRecord`
+## `Delete`
 
 ***Goal :***
   * instead delete record from table, we use softdelete. For use harddelete / remove record from database, please ask backend developer.
