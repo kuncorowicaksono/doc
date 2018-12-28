@@ -41,7 +41,7 @@ GET Method:
 POST Method:
 - [x] **[`insert`](#insert)**: Insert record, on successful updates return success: true;
 - [x] **[`update`](#update)**: Updates record, on successful updates return success: true;
-- [x] **[`delete`](#delete)**: Instead delete record from table, we add deletedAt in database; (soft deleted)
+- [x] **[`delete`](#delete record)**: Instead delete record from table, we add deletedAt in database; (soft deleted)
 - [x] **[`updatesoftdeleted`](#updatesoftdeleted)**: Restore data which already in softDeletedRecord;
 
 Another / Additional:
@@ -200,7 +200,7 @@ or in table view looks like this:
 
 <br/>
 
-## `Delete`
+## `Delete Record`
 
 ***Goal :***
   * instead delete record from table, we use softdelete. For use harddelete / remove record from database, please ask backend developer.
