@@ -49,10 +49,9 @@ Another / Additional:
 
 ## Running it locally
 
-- `cd application/models`
-- `git clone git@github.com:devhubapp/devhub.git`
+- `git clone --gi tlink will be shared later--`
 
-That's it. It will copy the basicModel to your model. 
+That's it. It will copy the controller. 
 
 ## Data Schema
 
@@ -129,7 +128,6 @@ or in table view looks like this:
 - `user_id++ `: your username;
 - `...`: another column & value;
 
-
 <br/>
 
 ## `getSoftDeleteRecords`
@@ -138,8 +136,26 @@ or in table view looks like this:
   * return array of softDelete records from table
   
 ***How to call:***
-```php
-  $this->BasicModels->getSoftDeleteRecords('tbl_name',$condition_array,$select,...);
+```endpoint
+  GET: directoryname/{controller}/readsoftdeleted
+```
+***Parameters :***
+> ++ indicates parameter is must
+- `{controller}++`: Controller Name;
+- `id++ `: primary key
+- `user_id++ `: your username;
+- `...`: another column & value;
+
+<br/>
+
+## `insertRecord`
+
+***Goal :***
+  * insert record, on successful updates return success: true.
+  
+***How to call:***
+```endpoint
+  POST: directoryname/{controller}/insert
 ```
 ***Parameters :***
 ```
@@ -157,60 +173,51 @@ or in table view looks like this:
 
 <br/>
 
-## `insertRecord`
-
-***Goal :***
-  * insert record, on successful updates return success: true.
-  
-***How to call:***
-```php
-  $this->BasicModels->insertRecord('tbl_name',$data_array,$id);
-```
-***Parameters :***
-> ++ indicates parameter is must
-
-- `$tbl_name++ `: name of table 
-- `$data_array++ `: array('column_name1'=>$column_val1,'column_name2'=>$column_val2);
-- `$id `: primary column value. only use insert_id if ID is autoincrement;
-
-<br/>
-
 ## `updateRecord`
 
 ***Goal :***
   * updates record, on successful updates return success: true.
   
 ***How to call:***
-```php
-  $this->BasicModels->updateRecord('tbl_name',$data_array,$pri_col,$id)
+```endpoint
+  POST: directoryname/{controller}/update
 ```
 ***Parameters :***
-> ++ indicates parameter is must
+```
+    {
+        "id": 1,
+        ...
+        "user_id": "yourusername"
+    }
+```
 
-- `$tbl_name++ `: name of table;
-- `$data_array++ `: array('column_name1'=>$column_val1,'column_name2'=>$column_val2);
-- `$pri_col++ `: primary key or column name depending on which update query need to fire;
-- `$id `: primary column value. only use insert_id if ID is autoincrement;
+> ++ indicates parameter is must
+- `id++ `: primary key
+- `user_id++ `: your username;
+- `...`: another column & value;
 
 <br/>
 
-## `softDeleteRecord`
+## `DeleteRecord`
 
 ***Goal :***
-  * instead delete record from table, we add deletedAt in database
+  * instead delete record from table, we use softdelete. For use harddelete / remove record from database, please ask backend developer.
   
 ***How to call:***
-```php
-  $this->BasicModels->softDeleteRecord('tbl_name','pri_col',$id)
+```endpoint
+  POST: directoryname/{controller}/delete
 ```
 ***Parameters :***
+```
+    {
+        "id": 1,
+        "user_id": "yourusername"
+    }
+```
+
 > ++ indicates parameter is must
-
-- `$tbl_name++ `: name of table;
-- `$pri_col++ `: primary key or column name depending on which update query need to fire;
-- `$id `: primary column or condition column value;
-
-> It will useful while deleting record from single table. *delete join will not work here.
+- `id++ `: primary key
+- `user_id++ `: your username;
 
 <br/>
 
@@ -220,39 +227,20 @@ or in table view looks like this:
   * restore data which already in softDeletedRecord.
   
 ***How to call:***
-```php
-  $this->BasicModels->restoreSoftDeletedRecord('tbl_name','pri_col',$id)
+```endpoint
+  POST: directoryname/{controller}/updatesoftdeleted
 ```
 ***Parameters :***
-> ++ indicates parameter is must
-
-- `$tbl_name++ `: name of table;
-- `$data_array++ `: array('column_name1'=>$column_val1,'column_name2'=>$column_val2);
-- `$pri_col++ `: primary key or column name depending on which update query need to fire;
-- `$id `: primary column or condition column value;
-
-> It will useful while deleting record from single table. *delete join will not work here.
-
-<br/>
-
-## `hardDeleteRecord`
-
-***Goal :***
-  * delete record from table, and store it to log.
-  
-***How to call:***
-```php
-  $this->BasicModels->hardDeleteRecord('tbl_name','pri_col',$id)
 ```
-***Parameters :***
+    {
+        "id": 1,
+        "user_id": "yourusername"
+    }
+```
+
 > ++ indicates parameter is must
-
-- `$tbl_name++ `: name of table;
-- `$data_array++ `: array('column_name1'=>$column_val1,'column_name2'=>$column_val2);
-- `$pri_col++ `: primary key or column name depending on which update query need to fire;
-- `$id `: primary column or condition column value;
-
-> It will useful while deleting record from single table. *delete join will not work here.
+- `id++ `: primary key
+- `user_id++ `: your username;
 
 <br/>
 
