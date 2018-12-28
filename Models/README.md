@@ -18,15 +18,15 @@ BasicModel helps you (developer) to create a code more fast and efficient. By us
 ## Features
 
 - [x] **[`getRecordCount`](#getRecordCount)**: Return number of rows;
-- [x] **getRecords**: Return array of records from table; *without softDelete;
-- [x] **insertRecord**: Insert record, on successful updates return success: true;
-- [x] **updateRecord**: Updates record, on successful updates return success: true;
+- [x] **[`getRecords`](#getRecords)**: Return array of records from table; *without softDelete;
+- [x] **[`insertRecord`](#insertRecord)**: Insert record, on successful updates return success: true;
+- [x] **[`updateRecord`](#updateRecord)**: Updates record, on successful updates return success: true;
 
-- [x] **softDeleteRecord**: Instead delete record from table, we add deletedAt in database;
-- [x] **getSoftDeletedRecords**: Return array of softDelete records from table;
-- [x] **restoreSoftDeletedRecord**: Restore data which already in softDeletedRecord;
+- [x] **[`softDeleteRecord`](#softDeleteRecord)**: Instead delete record from table, we add deletedAt in database;
+- [x] **[`getSoftDeletedRecords`](#getSoftDeletedRecords)**: Return array of softDelete records from table;
+- [x] **[`restoreSoftDeletedRecord`](#restoreSoftDeletedRecord)**: Restore data which already in softDeletedRecord;
 
-- [x] **hardDeleteRecord**: Delete record from table, and store it to log;
+- [x] **[`hardDeleteRecord`](#hardDeleteRecord)**: Delete record from table, and store it to log;
 
 ### Next features:
 
