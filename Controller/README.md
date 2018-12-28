@@ -41,7 +41,7 @@ GET Method:
 POST Method:
 - [x] **[`insert`](#insert)**: Insert record, on successful updates return success: true;
 - [x] **[`update`](#update)**: Updates record, on successful updates return success: true;
-- [x] **[`delete`](#delete record)**: Instead delete record from table, we add deletedAt in database; (soft deleted)
+- [x] **[`delete`](#deleterecord)**: Instead delete record from table, we add deletedAt in database; (soft deleted)
 - [x] **[`updatesoftdeleted`](#updatesoftdeleted)**: Restore data which already in softDeletedRecord;
 
 Another / Additional:
