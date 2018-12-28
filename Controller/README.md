@@ -8,7 +8,7 @@
 
 ## General options
 
-All API should have api key in header, please ask developer for any api_key.
+**All API should have api key in header**, please ask developer for any api_key.
 
 The following syntax applies to all services, except as noted.
 
@@ -58,7 +58,7 @@ That's it. It will copy the basicModel to your model.
 
 For purpose of soft delete vs hard delete, our return of array will look like this:
 
-```json
+```endpoint
 [
     {
         "id": "1",
@@ -79,7 +79,7 @@ For purpose of soft delete vs hard delete, our return of array will look like th
 
 or in table view looks like this:
 
-```
+```endpoint
 ┌────┬─────┬───────────┬───────────┬───────────┐
 │ id │ ... │ createdAt │ updatedAt │ deletedAt │
 ├────┼─────┼───────────┼───────────┼───────────┤
@@ -97,31 +97,26 @@ or in table view looks like this:
 
 ## How to Call
 
-## `getRecordCount`
+## `getsingle`
 
 ***Goal :***
-  * return number of rows
+  * return array of one records from table; *without softDelete;
   
 ***How to call:***
-```php
-  $this->BasicModels->getRecordCount('tbl_name',$condition_array);
+```endpoint
+  GET: directoryname/{controller}/getsingle/{value}
 ```
-***Parameters :***
-> ++ indicates parameter is must
-
-- `$tbl_name++ `: name of table 
-- `$condition `: array('column_name1'=>$column_val1,'column_name2'=>$column_val2);
 
 <br/>
 
-## `getRecords`
+## `get`
 
 ***Goal :***
   * return array of records from table (without softDelete)
   
 ***How to call:***
-```php
-  $this->BasicModels->getRecords('tbl_name',$condition_array,$select,...);
+```endpoint
+  GET: directoryname/{controller}/get
 ```
 ***Parameters :***
 > ++ indicates parameter is must
@@ -152,21 +147,18 @@ or in table view looks like this:
   $this->BasicModels->getSoftDeleteRecords('tbl_name',$condition_array,$select,...);
 ```
 ***Parameters :***
-> ++ indicates parameter is must
-
-- `$tbl_name++ `: name of table 
-- `$condition `: array('column_name1'=>$column_val1,'column_name2'=>$column_val2);
-- `$select `: ('col1,col2,col3');
-- `$order_by `: array('colname1'=>order,'colname2'=>order); Order='ASC OR DESC';
-- `$start `: start for paging (number);
-- `$limit `: limit for paging (number);
-- `$join `: array('jointable'=>$table_b,'match_a'=>$table_a_reference,'match_b'=>$table_b_reference,'join_type'=>$join_type); join_type = FALSE/'LEFT'/'RIGHT';
-
-> Note: in case where we need joins, you can pass joins in controller also:
-```php
-  $this->db->join('tbl_nameB AS b','tbl_nameA.col=b.col','left');
-  $this->BasicModels->getRecords('tbl_name',$condition_array,$select,...);	
 ```
+    {
+        "id": 1,
+        ...
+        "user_id": "yourusername"
+    }
+```
+
+> ++ indicates parameter is must
+- `id++ `: primary key
+- `user_id++ `: your username;
+- `...`: another column & value;
 
 <br/>
 
