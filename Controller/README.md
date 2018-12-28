@@ -49,7 +49,7 @@ Another / Additional:
 
 ## Running it locally
 
-- `git clone --gi tlink will be shared later--`
+- `git clone --git link will be shared later--`
 
 That's it. It will copy the controller. 
 
