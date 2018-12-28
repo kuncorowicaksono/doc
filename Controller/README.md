@@ -25,8 +25,8 @@ GET/POST: {controller}/{method}/{value:optional}
 | --- | --- |
 | `controller` | Class / filename as a blueprint or a set of instruction / method |
 | `method` | Method name |
-| `value` | Optional; One of the following method use this value: [`getsingle`](###getsingle) |
-| `primarykey`| String of id/primary key; for open the data detail, please get all data first using [`getsingle`](###getsingle) method |
+| `value` | Optional; One of the following method use this value: [`getsingle`](#getsingle) |
+| `primarykey`| String of id/primary key; for open the data detail, please get all data first using [`getsingle`](#getsingle) method |
 | `pk_value`| String or integer as value of those primary key |
 | `user_id`| To capture user who doing update and store it to database |
 | `body format`| Only `json` is supported at the moment. This parameter is mandatory for all POST method |
@@ -45,7 +45,7 @@ POST Method:
 - [x] **updatesoftdeleted**: Restore data which already in softDeletedRecord;
 
 Another / Additional:
-- [x] **hardDeleteRecord**: Delete record from table, and store it to log;
+- [x] **hardDeleteRecord**: Delete record from table, and store it to log; (by request)
 
 ## Running it locally
 
@@ -106,6 +106,10 @@ or in table view looks like this:
 ```endpoint
   GET: directoryname/{controller}/getsingle/{value}
 ```
+***Parameters :***
+> ++ indicates parameter is must
+- `{controller}++`: Controller Name;
+- `{value}++`: primary key value;
 
 <br/>
 
@@ -120,20 +124,11 @@ or in table view looks like this:
 ```
 ***Parameters :***
 > ++ indicates parameter is must
+- `{controller}++`: Controller Name;
+- `id++ `: primary key
+- `user_id++ `: your username;
+- `...`: another column & value;
 
-- `$tbl_name++ `: name of table 
-- `$condition `: array('column_name1'=>$column_val1,'column_name2'=>$column_val2);
-- `$select `: ('col1,col2,col3');
-- `$order_by `: array('colname1'=>order,'colname2'=>order); Order='ASC OR DESC';
-- `$start `: start for paging (number);
-- `$limit `: limit for paging (number);
-- `$join `: array('jointable'=>$table_b,'match_a'=>$table_a_reference,'match_b'=>$table_b_reference,'join_type'=>$join_type); join_type = FALSE/'LEFT'/'RIGHT';
-
-> Note: in case where we need joins, you can pass joins in controller also:
-```php
-  $this->db->join('tbl_nameB AS b','tbl_nameA.col=b.col','left');
-  $this->BasicModels->getRecords('tbl_name',$condition_array,$select,...);	
-```
 
 <br/>
 
