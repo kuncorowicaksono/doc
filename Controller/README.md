@@ -167,6 +167,7 @@ or in table view looks like this:
 ```
 
 > ++ indicates parameter is must
+- `{controller}++`: Controller Name;
 - `id++ `: primary key
 - `user_id++ `: your username;
 - `...`: another column & value;
@@ -192,6 +193,7 @@ or in table view looks like this:
 ```
 
 > ++ indicates parameter is must
+- `{controller}++`: Controller Name;
 - `id++ `: primary key
 - `user_id++ `: your username;
 - `...`: another column & value;
@@ -216,6 +218,7 @@ or in table view looks like this:
 ```
 
 > ++ indicates parameter is must
+- `{controller}++`: Controller Name;
 - `id++ `: primary key
 - `user_id++ `: your username;
 
@@ -239,6 +242,7 @@ or in table view looks like this:
 ```
 
 > ++ indicates parameter is must
+- `{controller}++`: Controller Name;
 - `id++ `: primary key
 - `user_id++ `: your username;
 
